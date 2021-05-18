@@ -93,6 +93,27 @@ function lesser(x, y) {
 //
 // If any other language code is used, return nothing.
 
+function multigreeting(lang) {
+    function greeting(names) {
+            return 'Hello, ' + names + '!'
+        }
+    if (lang === 'en') {
+        return ('Hello, ' + names + '!' )
+    }
+    else if (lang === 'es') {
+        return ('¡Hola, ' + names + '!')
+    }
+    else if (lang === 'fr') {
+        return ('Bonjour, ' + names + '!')
+    }
+    else if (lang === 'eo') {
+            return ('Saluton, ' + names + '!')
+        }
+    else {
+        return null
+}
+}
+
 // 11. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
 // example, the greatest common divisor of 24 and 81 is 3. The greatest common divisor of
