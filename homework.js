@@ -144,16 +144,16 @@ function multigreeting(userName, lang) {
 
 function gcd (a, b) {
     let d = 0
-    while (a % 2 == 0 && b % 2 == 0) {
+    while (a % 2 === 0 && b % 2 === 0) {
         a = a/2
         b = b/2
         d = d + 1
     }
     while (a !== b) {
-        if (a % 2 == 0) {
+        if (a % 2 === 0) {
             a = a/2
         }
-        else if (b % 2 == 0) {
+        else if (b % 2 === 0) {
             b = b/2
         }
         else if (a > b) {
