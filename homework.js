@@ -62,11 +62,15 @@ function celsiusToFahrenheit(F) {
 // 1 degree Kelvin equals 1 degree Celsius.
 
 function fahrenheitToKelvin(K) {
-    function fahrenheitToCelsius(C) {
-        return ((K - 32) * (5/9))
-    }
-    return (((K - 32) * (5/9)) + 273.15)
-    }
+    return fahrenheitToCelsius(K) + 273.15
+}
+
+// function fahrenheitToKelvin(K) {
+//     function fahrenheitToCelsius(C) {
+//         return ((K - 32) * (5/9))
+//     }
+//     return (((K - 32) * (5/9)) + 273.15)
+//     }
 
 // 9. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
@@ -93,25 +97,22 @@ function lesser(x, y) {
 //
 // If any other language code is used, return nothing.
 
-function multigreeting(lang) {
-    function greeting(names) {
-            return 'Hello, ' + names + '!'
-        }
+function multigreeting(userName, lang) {
     if (lang === 'en') {
-        return ('Hello, ' + names + '!' )
+        return 'Hello, ' + userName + '!'
     }
     else if (lang === 'es') {
-        return ('¡Hola, ' + names + '!')
+        return '¡Hola, ' + userName + '!'
     }
     else if (lang === 'fr') {
-        return ('Bonjour, ' + names + '!')
+        return 'Bonjour, ' + userName + '!'
     }
     else if (lang === 'eo') {
-            return ('Saluton, ' + names + '!')
+            return 'Saluton, ' + userName + '!'
         }
     else {
-        return null
-}
+        return
+    }
 }
 
 // 11. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
@@ -137,6 +138,31 @@ function multigreeting(lang) {
 //     else b = (b – a)/2
 // g = a
 // output g * 2**d
+
+function gcd (a, b) {
+    let d = 0
+    while (a % 2 == 0 && b % 2 == 0) {
+        a = a/2
+        b = b/2
+        d = d + 1
+    }
+    while (a !== b) {
+        if (a % 2 == 0) {
+            a = a/2
+        }
+        else if (b % 2 == 0) {
+            b = b/2
+        }
+        else if (a > b) {
+            a = (a - b) / 2
+        }
+        else {
+            b = (b - a) / 2
+        }
+    }
+    const g = a
+    return g * 2**d 
+}
 
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
