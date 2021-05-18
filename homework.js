@@ -43,15 +43,15 @@ function isEven(number) {
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
-function fahrenheitToCelsius(C) {
-    return ((C - 32) * (5/9))
+function fahrenheitToCelsius(fTemp) {
+    return ((fTemp - 32) * (5/9))
 }
 
 // 7. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
-function celsiusToFahrenheit(F) {
-    return ((F * 9/5) + 32)
+function celsiusToFahrenheit(cTemp) {
+    return ((cTemp * 9/5) + 32)
 }
 
 // 8. Create a function called fahrenheitToKelvin that takes a
@@ -61,8 +61,8 @@ function celsiusToFahrenheit(F) {
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
 
-function fahrenheitToKelvin(K) {
-    return fahrenheitToCelsius(K) + 273.15
+function fahrenheitToKelvin(fTemp) {
+    return fahrenheitToCelsius(fTemp) + 273.15
 }
 
 // function fahrenheitToKelvin(K) {
